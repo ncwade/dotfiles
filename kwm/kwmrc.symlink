@@ -1,40 +1,8 @@
-/*
-This is a sample config for Kwm
-
-Commands prefixed with 'kwmc' will call
-local functions corresponding to the
-kwmc syntax.
-
-To run an external program or command,
-use the prefix 'exec' followed by command.
-e.g 'exec mvim' would open macvim
-
-Read file and execute commands as
-if they were written inside kwmrc.
-
-include filename
-
-e.g: bindsym-commands in a separate file called 'binds'
-include binds
-
-Create variables that can be used in the below commands.
-Variables are in file-scope and must be defined before
-they can be used. Re-definition is also possible.
-Variable names can not contain whitespace, where as
-the value can.
-
-define variable value
-
-e.g: create a variable for the hyper-key
-define hyper cmd+ctrl+alt+shift
-kwmc bindsym hyper-h window -f west
-*/
-
 // Set default values for screen padding
-kwmc config padding 40 20 20 20
+kwmc config padding 20 10 10 10
 
 // Set default values for container gaps
-kwmc config gap 15 15
+kwmc config gap 10 10
 
 // Default tiling mode for Kwm (bsp | monocle | float)
 kwmc config tiling bsp
@@ -83,18 +51,7 @@ kwmc config spawn left
    This is because some applications do not have the
    AXWindowRole and AXStandardWindowSubRole */
 kwmc rule owner="iTerm2" properties={role="AXDialog"}
-
-/* The following commands create rules that
-   blacklists an application from Kwms tiling
-
-   kwmc rule owner="Steam" properties={float="true"}
-   kwmc rule owner="Photoshop" properties={float="true"} */
-
-/* The following command creates a rule that
-   captures an application to the given screen,
-   if the screen exists.
-
-   kwmc rule owner="iTunes" properties={display="1"} */
+kwmc config add-role AXDialog iTerm2
 
 // Enable border for focused window
 kwmc config border focused on
@@ -144,6 +101,7 @@ kwmc bindsym prefix-< window -c type toggle
 
 // Set Temporary Window Container
 kwmc bindsym prefix-f window -z fullscreen
+
 kwmc bindsym prefix-d window -z parent
 kwmc bindsym prefix-w window -t focused
 

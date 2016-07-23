@@ -12,6 +12,8 @@ alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && kill
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 alias damn='sudo $(fc -ln -1)'
 alias tmux="tmux -2"
+alias kwmon='brew services start kwm'
+alias kwmoff='brew services stop kwm'
 function weather() {
   curl "http://wttr.in/${1-}";
 }

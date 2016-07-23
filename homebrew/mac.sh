@@ -46,7 +46,6 @@ do
 done
 
 CASKS=(
-    alfred
     iterm2
     vagrant
     virtualbox
