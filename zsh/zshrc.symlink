@@ -8,7 +8,7 @@ export ZSH_CUSTOM=$PROJECTS/dotfiles/zsh
 export TMUX_CUSTOM=$PROJECTS/dotfiles/tmux
 
 # Theme
-ZSH_THEME="bullet-train"
+ZSH_THEME="hyper-nick"
 DEFAULT_USER="Nick"
 
 plugins=(git brew sublime tmux osx vagrant)
