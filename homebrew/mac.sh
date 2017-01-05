@@ -43,6 +43,7 @@ FORMULAS=(
     xz
     pianobar
     neovim/neovim/neovim
+    ctags
 )
 for form in ${FORMULAS[@]}
 do

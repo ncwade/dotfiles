@@ -8,6 +8,8 @@ call vundle#begin()
 " Load plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 
 " Detect filetypes and enable syntax highlighting
@@ -44,4 +46,11 @@ set hlsearch
 " Remap : -> ; to make entering command mode easier.
 nnoremap ; :
 vnoremap ; :
+
+" Configure plugin settings.
+let g:ctrlp_working_path_mode = 'rw'
+
+" Custom shortcuts
+map <C-n> :NERDTreeToggle<CR>
+map <C-m> :TagbarToggle<CR>
 
