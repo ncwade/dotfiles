@@ -39,6 +39,10 @@ FORMULAS=(
     python3
     screenfetch
     wget
+    iperf3
+    xz
+    pianobar
+    neovim/neovim/neovim
 )
 for form in ${FORMULAS[@]}
 do
@@ -49,6 +53,10 @@ CASKS=(
     iterm2
     vagrant
     virtualbox
+    google-chrome
+    tunnelblick
+    google-drive
+    wireshark
 )
 for barrel in ${CASKS[@]}
 do
