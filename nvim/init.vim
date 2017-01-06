@@ -10,6 +10,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
+Plugin 'craigemery/vim-autotag'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 " Detect filetypes and enable syntax highlighting
@@ -49,8 +51,9 @@ vnoremap ; :
 
 " Configure plugin settings.
 let g:ctrlp_working_path_mode = 'rw'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " Custom shortcuts
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :TagbarToggle<CR>
+map <C-s> :NERDTreeToggle<CR> " S for sidebar
+map <C-m> :TagbarToggle<CR> " M for map
 

@@ -79,4 +79,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
+# Install xcode CLI utilities
+xcode-select --install
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
