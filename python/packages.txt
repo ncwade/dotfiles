@@ -1,3 +1,4 @@
 ansible
 virtualenvwrapper
 neovim
+tmuxp

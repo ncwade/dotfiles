@@ -31,6 +31,7 @@ do
 done
 
 FORMULAS=(
+    cmake
     go
     rust
     tmux
@@ -44,6 +45,10 @@ FORMULAS=(
     pianobar
     neovim/neovim/neovim
     ctags
+    ranger
+    weechat
+    pandoc
+    node
 )
 for form in ${FORMULAS[@]}
 do
@@ -51,13 +56,14 @@ do
 done
 
 CASKS=(
-    iterm2
+    iterm2-nightly
     vagrant
     virtualbox
     google-chrome
     tunnelblick
     google-drive
     wireshark
+    postman
 )
 for barrel in ${CASKS[@]}
 do
