@@ -14,6 +14,5 @@ alias damn='sudo $(fc -ln -1)'
 alias tmux="tmux -2"
 alias kwmon='brew services start kwm'
 alias kwmoff='brew services stop kwm'
-function weather() {
-  curl "http://wttr.in/${1-}";
-}
+alias khdon='brew services start khd'
+alias khdoff='brew services stop khd'

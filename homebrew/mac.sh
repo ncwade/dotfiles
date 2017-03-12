@@ -36,6 +36,7 @@ FORMULAS=(
     rust
     tmux
     kwm
+    khd
     python
     python3
     screenfetch
@@ -49,6 +50,7 @@ FORMULAS=(
     weechat
     pandoc
     node
+    htop
 )
 for form in ${FORMULAS[@]}
 do
@@ -56,6 +58,7 @@ do
 done
 
 CASKS=(
+    atom-beta
     iterm2-nightly
     vagrant
     virtualbox
