@@ -1,6 +1,3 @@
 [submodule "iterm2"]
 	path = iterm2
 	url = https://github.com/arcticicestudio/nord-iterm2
-[submodule "nerdbar"]
-	path = nerdbar
-	url = https://github.com/thewadegeek/nerdbar.widget
