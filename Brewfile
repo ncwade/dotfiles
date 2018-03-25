@@ -1,0 +1,30 @@
+cask_args appdir: "/Applications"
+
+tap "homebrew/bundle"
+
+# CLI Apps
+brew "cmake"
+brew "go"
+brew "rust"
+brew "tmux"
+brew "python"
+brew "python3"
+brew "iperf3"
+brew "node"
+brew "htop"
+brew "wget"
+brew "gnupg"
+brew "gnupg@2.0"
+brew "ykman"
+
+# GUI Tools
+cask "1password"
+cask "vagrant"
+cask "virtualbox"
+cask "tunnelblick"
+cask "google-drive-file-stream"
+cask "wireshark"
+cask "postman"
+cask "slack"
+cask "visual-studio-code"
+cask "keybase"

@@ -1,0 +1,9 @@
+# Basic configuration.
+[core]
+        excludesfile = ~/.gitignore
+	editor = vim
+[push]
+        default = simple
+[user]
+	name = Nick Wade
+	email = me@ncwade.com
