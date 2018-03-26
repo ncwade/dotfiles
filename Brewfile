@@ -17,6 +17,7 @@ brew "gnupg"
 brew "gnupg@2.0"
 brew "ykman"
 brew "ctags"
+brew "pinentry-mac"
 
 # GUI Tools
 cask "1password"
