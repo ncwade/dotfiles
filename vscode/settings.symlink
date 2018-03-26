@@ -6,5 +6,6 @@
     "sublimeTextKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "python.pythonPath": "/usr/local/bin/python3"
 }

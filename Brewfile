@@ -16,6 +16,7 @@ brew "wget"
 brew "gnupg"
 brew "gnupg@2.0"
 brew "ykman"
+brew "ctags"
 
 # GUI Tools
 cask "1password"
