@@ -10,6 +10,7 @@ export TMUX_CUSTOM=$PROJECTS/dotfiles/tmux
 # Extra variables
 export GOPATH=$PROJECTS/go
 export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/bin:$GOPATH/bin:$PATH"
 export "GPG_TTY=$(tty)"
 export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
 

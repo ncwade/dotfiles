@@ -2,6 +2,19 @@ cask_args appdir: "/Applications"
 
 tap "homebrew/bundle"
 
+# Casks
+cask "1password"
+cask "vagrant"
+cask "virtualbox"
+cask "tunnelblick"
+cask "google-drive-file-stream"
+cask "wireshark"
+cask "postman"
+cask "slack"
+cask "visual-studio-code"
+cask "keybase"
+cask "java"
+
 # CLI Apps
 brew "cmake"
 brew "go"
@@ -18,15 +31,4 @@ brew "gnupg@2.0"
 brew "ykman"
 brew "ctags"
 brew "pinentry-mac"
-
-# GUI Tools
-cask "1password"
-cask "vagrant"
-cask "virtualbox"
-cask "tunnelblick"
-cask "google-drive-file-stream"
-cask "wireshark"
-cask "postman"
-cask "slack"
-cask "visual-studio-code"
-cask "keybase"
+brew "maven"

@@ -4,6 +4,48 @@ set -e
 # Install brew if needed
 HOST=`uname`
 
+
+install_file ()
+{
+    src=$1
+    dst=$2
+
+    # Clean of the config if it exists.
+    if [[ -e "$dst" ]]
+    then
+        rm -r "$dst"
+    fi
+
+    # Link our modifications to the correct places.
+    ln -s "$PWD/$src" "$dst"
+}
+
+
+install_cfg ()
+{
+    src=$1
+    SRC_FOLDER=$(dirname $src)
+    # Clean of the config if it exists.
+    if [[ -f "$SRC_FOLDER/cfg.dest" ]]
+    then
+        dst=$(eval echo $(cat $SRC_FOLDER/cfg.dest))
+    else
+        # Default to the home folder.
+        dst="$HOME/.$(basename "${src%.*}")"
+    fi
+
+    install_file $src $dst
+}
+
+
+install_bin ()
+{
+    src=$1
+    mkdir -p $HOME/bin
+    install_file $src $HOME/bin/$(basename "${src%.*}")
+}
+
+
 # Install oh-my-zsh if it does not exist.
 if [[ ! -a $HOME/.oh-my-zsh ]]; then
   echo "   Installing Oh My ZShell!"
@@ -32,24 +74,13 @@ find . -name install.sh | while read script ; do sh -c "${script}" ; done
 # Find and symlink all of the config files.
 for src in $(find -H . -maxdepth 2 -name '*.symlink')
 do
-    SRC_FOLDER=$(dirname $src)
-    # Clean of the config if it exists.
-    if [[ -f "$SRC_FOLDER/symlink.destination" ]]
-    then
-        dst=$(eval echo $(cat $SRC_FOLDER/symlink.destination))
-    else
-        # Default to the home folder.
-        dst="$HOME/.$(basename "${src%.*}")"
-    fi
+    install_cfg $src
+done
 
-    # Clean of the config if it exists.
-    if [[ -f "$dst" ]]
-    then
-        rm "$dst"
-    fi
-
-    # Link our modifications to the correct places.
-    ln -s "$PWD/$src" "$dst"
+# Find and symlink all of the scripts we want in our path.
+for src in $(find -H . -maxdepth 2 -name '*.bin')
+do
+    install_bin $src
 done
 
 # Change the shell to ZSH
