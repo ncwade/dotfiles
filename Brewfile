@@ -14,6 +14,7 @@ cask "slack"
 cask "visual-studio-code"
 cask "keybase"
 cask "java"
+cask "zoom"
 
 # CLI Apps
 brew "cmake"
