@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Projects folder
-export PROJECTS=~/projects
+export PROJECTS=~/src/github.com/
 # Set custom directory.
 export ZSH_CUSTOM=$PROJECTS/dotfiles/zsh
 export TMUX_CUSTOM=$PROJECTS/dotfiles/tmux
@@ -18,7 +18,7 @@ export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
 ZSH_THEME="hyper-nick"
 DEFAULT_USER="ncwade"
 
-plugins=(git brew sublime tmux osx vagrant)
+plugins=(git sublime tmux osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
 

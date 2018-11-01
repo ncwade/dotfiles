@@ -9,6 +9,7 @@ install_file ()
 {
     src=$1
     dst=$2
+    dstDir=$(dirname $dst)
 
     # Clean of the config if it exists.
     if [[ -e "$dst" ]]
@@ -16,6 +17,7 @@ install_file ()
         rm -r "$dst"
     fi
 
+    mkdir -p $dstDir
     # Link our modifications to the correct places.
     ln -s "$PWD/$src" "$dst"
 }
