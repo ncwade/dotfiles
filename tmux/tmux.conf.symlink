@@ -52,3 +52,11 @@ set -g status-justify left
 setw -g window-status-current-format ' #W #[fg=colour50]#F '
 setw -g window-status-format ' #W #[fg=colour50]#F '
 set -g status-right " "
+set -g @nord_tmux_show_status_content "0"
+
+# TPM plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'arcticicestudio/nord-tmux'
+
+# Nothing below this line
+run '~/.tmux/plugins/tpm/tpm'

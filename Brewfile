@@ -21,6 +21,8 @@ cask "fantastical"
 cask "keepassxc"
 cask "spotify"
 cask "cyberduck"
+cask "docker"
+cask "dotnet-sdk"
 
 
 # CLI Apps
@@ -40,3 +42,5 @@ brew "ykman"
 brew "ctags"
 brew "pinentry-mac"
 brew "kubectl"
+brew "kube-ps1"
+brew "nuget"

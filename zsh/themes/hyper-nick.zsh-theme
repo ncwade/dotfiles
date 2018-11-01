@@ -1,5 +1,5 @@
 # The prompt
-PROMPT='$(_user_host)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}%{$fg[magenta]%}$(git_prompt_status)${_return_status}λ '
+PROMPT='$(_user_host)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}%{$fg[magenta]%}$(git_prompt_status)${_return_status}'
 
 local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 

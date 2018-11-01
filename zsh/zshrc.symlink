@@ -20,6 +20,7 @@ DEFAULT_USER="ncwade"
 
 plugins=(git sublime tmux osx vagrant)
 
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor.
@@ -31,3 +32,5 @@ export LANG=en_US.UTF-8
 
 # Start gpg-agent
 gpg-connect-agent updatestartuptty /bye
+PS1=$PS1'$(kube_ps1)λ '
+kubeoff
