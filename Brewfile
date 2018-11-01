@@ -20,6 +20,7 @@ cask "mongodb-compass-community"
 cask "fantastical"
 cask "keepassxc"
 cask "spotify"
+cask "cyberduck"
 
 
 # CLI Apps
@@ -38,3 +39,4 @@ brew "gpg2"
 brew "ykman"
 brew "ctags"
 brew "pinentry-mac"
+brew "kubectl"
