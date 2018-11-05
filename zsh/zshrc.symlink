@@ -34,3 +34,4 @@ export LANG=en_US.UTF-8
 gpg-connect-agent updatestartuptty /bye
 PS1=$PS1'$(kube_ps1)λ '
 kubeoff
+source ~/.env.local

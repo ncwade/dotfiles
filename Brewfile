@@ -1,6 +1,8 @@
 cask_args appdir: "/Applications"
 
 tap "homebrew/bundle"
+tap "crisidev/homebrew-chunkwm"
+tap "homebrew/services"
 
 # Casks
 cask "1password"
@@ -23,7 +25,7 @@ cask "spotify"
 cask "cyberduck"
 cask "docker"
 cask "dotnet-sdk"
-
+cask "google-cloud-sdk"
 
 # CLI Apps
 brew "cmake"
@@ -33,7 +35,7 @@ brew "tmux"
 brew "python"
 brew "python3"
 brew "iperf3"
-brew "node"
+brew "node@8"
 brew "htop"
 brew "wget"
 brew "gnupg"
@@ -44,3 +46,5 @@ brew "pinentry-mac"
 brew "kubectl"
 brew "kube-ps1"
 brew "nuget"
+brew "chunkwm", args: ['HEAD', 'with-tmp-logging']
+brew "koekeishiya/formulae/skhd", args: ['HEAD', 'with-logging']

@@ -8,5 +8,5 @@
 	name = Nick Wade
 	email = me@ncwade.com
 
-[includeIf "gitdir:~/src/github.secureserver.net"]
+[includeIf "gitdir:~/src/github.secureserver.net/"]
     path = ~/src/github.secureserver.net/.gitconfig

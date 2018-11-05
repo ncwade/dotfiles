@@ -67,12 +67,6 @@ then
     fi
 fi
 
-# Run Homebrew through the Brewfile
-brew bundle
-
-# find and run installers.
-find . -name install.sh | while read script ; do sh -c "${script}" ; done
-
 # Find and symlink all of the config files.
 for src in $(find -H . -maxdepth 2 -name '*.symlink')
 do
@@ -84,6 +78,12 @@ for src in $(find -H . -maxdepth 2 -name '*.bin')
 do
     install_bin $src
 done
+
+# Run Homebrew through the Brewfile
+brew bundle
+
+# find and run installers.
+find . -name install.sh | while read script ; do sh -c "${script}" ; done
 
 # Change the shell to ZSH
 chsh -s /bin/zsh
