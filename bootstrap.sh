@@ -54,18 +54,6 @@ if [[ ! -a $HOME/.oh-my-zsh ]]; then
   git clone http://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
-# Check for Homebrew
-if [[ ! -f "$(which brew)" ]]
-then
-    echo "Installing Homebrew"
-    # Install the correct homebrew for each OS type
-    if [[ "$HOST" = "Darwin" ]]
-    then
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    else
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-    fi
-fi
 
 # Find and symlink all of the config files.
 for src in $(find -H . -maxdepth 2 -name '*.symlink')
@@ -78,9 +66,6 @@ for src in $(find -H . -maxdepth 2 -name '*.bin')
 do
     install_bin $src
 done
-
-# Run Homebrew through the Brewfile
-brew bundle
 
 # find and run installers.
 find . -name install.sh | while read script ; do sh -c "${script}" ; done
